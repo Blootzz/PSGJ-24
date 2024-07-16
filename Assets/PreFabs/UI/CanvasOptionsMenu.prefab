@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7521019915095075013}
   - component: {fileID: 2854834467640160191}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TextSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,8 +166,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7917067255379675682}
   - {fileID: 7349948707702114799}
+  - {fileID: 7917067255379675682}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
