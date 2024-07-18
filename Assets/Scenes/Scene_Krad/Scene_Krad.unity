@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 0.114580505, g: 0.33012125, b: 0.71203196, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -324,7 +328,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+<<<<<<< Updated upstream
   - {fileID: 2100000, guid: 7d73b039e5a9b834aa3f16ca545b9b7e, type: 2}
+=======
+  - {fileID: 2100000, guid: e4e52a70d0bc6644585f5cffa10cfc1c, type: 2}
+>>>>>>> Stashed changes
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -427,11 +435,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: -7943315349962472709, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a31c28e07aa35ab458d6d488ec8b486c, type: 2}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: -7742345325359258371, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Enabled
@@ -441,7 +452,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 2100000, guid: db337c5b054449f47a9d0b35c142c1f7, type: 2}
+=======
+      objectReference: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 919132149155446097, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Name
@@ -456,7 +471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 2100000, guid: db337c5b054449f47a9d0b35c142c1f7, type: 2}
+=======
+      objectReference: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 2882020325815389910, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Enabled
@@ -466,7 +485,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 2100000, guid: db337c5b054449f47a9d0b35c142c1f7, type: 2}
+=======
+      objectReference: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 7434925609163365296, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Enabled
@@ -1135,11 +1158,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
     - target: {fileID: -7943315349962472709, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a31c28e07aa35ab458d6d488ec8b486c, type: 2}
+=======
+>>>>>>> Stashed changes
     - target: {fileID: -7742345325359258371, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Enabled
@@ -1149,7 +1175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 2100000, guid: db337c5b054449f47a9d0b35c142c1f7, type: 2}
+=======
+      objectReference: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 919132149155446097, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Name
@@ -1164,7 +1194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 2100000, guid: db337c5b054449f47a9d0b35c142c1f7, type: 2}
+=======
+      objectReference: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 2882020325815389910, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Enabled
@@ -1174,7 +1208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+<<<<<<< Updated upstream
       objectReference: {fileID: 2100000, guid: db337c5b054449f47a9d0b35c142c1f7, type: 2}
+=======
+      objectReference: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
     - target: {fileID: 7434925609163365296, guid: 0487ab11aae9b204499f4971ba7b2fb2,
         type: 3}
       propertyPath: m_Enabled

@@ -3,7 +3,16 @@ guid: 0487ab11aae9b204499f4971ba7b2fb2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
+<<<<<<< Updated upstream
   externalObjects: {}
+=======
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone_Floor
+    second: {fileID: 2100000, guid: 69d409913c5919741b5746180ec61f9b, type: 2}
+>>>>>>> Stashed changes
   materials:
     materialImportMode: 2
     materialName: 0
