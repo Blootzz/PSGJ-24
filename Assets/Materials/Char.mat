@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Char
-  m_Shader: {fileID: -6465566751694194690, guid: bf36778a400a0894b86a1f49c422fa62,
+  m_Shader: {fileID: -6465566751694194690, guid: 32431c8ab538ffe46867f10916e3ba2d,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -90,9 +90,9 @@ Material:
     - _Metallic: 0
     - _NormalSensitivity: 0.8
     - _OcclusionStrength: 1
-    - _OutlineDepthSensitivity: 0.6
-    - _OutlineNormalsSensitivity: 0.5
-    - _OutlineThickness: 2
+    - _OutlineDepthSensitivity: 0.779
+    - _OutlineNormalsSensitivity: 0.985
+    - _OutlineThickness: 1.52
     - _Outline_Britness: 3.55
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -109,7 +109,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 0.31132078, g: 0.3095586, b: 0.3095586, a: 0}
+    - _MainColor: {r: 0.09433961, g: 0.08401565, b: 0.08401565, a: 0}
     - _MixedShadowsColor: {r: 0.52380735, g: 0.5930185, b: 0.745283, a: 1}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
