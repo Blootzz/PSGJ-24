@@ -204,6 +204,9 @@
         },
         {
             "m_Id": "1aa04a42e9e444cdb6e3d6c954aea16b"
+        },
+        {
+            "m_Id": "45e820ba75a8482db980997acfd34778"
         }
     ],
     "m_GroupDatas": [
@@ -973,6 +976,9 @@
             },
             {
                 "m_Id": "1aa04a42e9e444cdb6e3d6c954aea16b"
+            },
+            {
+                "m_Id": "45e820ba75a8482db980997acfd34778"
             }
         ]
     },
@@ -1382,12 +1388,6 @@
 }
 
 {
-    "m_SGVersion": 2,
-    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
-    "m_ObjectId": "08a8aceb7acc49f5ae1aaffe4967c351"
-}
-
-{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.ColorRGBMaterialSlot",
     "m_ObjectId": "0959c7fcce6248afbd6f4bede2bcf45d",
@@ -1679,6 +1679,21 @@
         "e32": 0.0,
         "e33": 1.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "101d28a329b544139661f650647fb034",
+    "m_Id": 0,
+    "m_DisplayName": "Smoothness",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Smoothness",
+    "m_StageCapability": 2,
+    "m_Value": 0.0,
+    "m_DefaultValue": 0.5,
+    "m_Labels": []
 }
 
 {
@@ -3203,6 +3218,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "45e820ba75a8482db980997acfd34778",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.Smoothness",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "101d28a329b544139661f650647fb034"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.Smoothness"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.GroupData",
     "m_ObjectId": "461a31bbb0ba441fa0dc355439eff550",
     "m_Title": "Main light ramping",
@@ -3471,6 +3520,12 @@
     "m_CustomColors": {
         "m_SerializableColors": []
     }
+}
+
+{
+    "m_SGVersion": 2,
+    "m_Type": "UnityEditor.Rendering.Universal.ShaderGraph.UniversalUnlitSubTarget",
+    "m_ObjectId": "4ff18910e10040cb8451718f3f9e166f"
 }
 
 {
@@ -7588,7 +7643,7 @@
     "m_ObjectId": "fe4399afcfc44c70986da7a2b6670a89",
     "m_Datas": [],
     "m_ActiveSubTarget": {
-        "m_Id": "08a8aceb7acc49f5ae1aaffe4967c351"
+        "m_Id": "4ff18910e10040cb8451718f3f9e166f"
     },
     "m_AllowMaterialOverride": false,
     "m_SurfaceType": 0,
