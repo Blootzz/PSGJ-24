@@ -833,8 +833,8 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: PSGJ 2024
-  metroPackageVersion: 
+  metroPackageName: PSGJ2024
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -842,7 +842,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: PSGJ 2024
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: PSGJ 2024
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -889,7 +889,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -909,11 +915,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8041ef0d-6748-4615-9732-45c6a851a73c
+  cloudProjectId: 26ef3a91-5289-4987-b683-cff269edc6b9
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: PSGJ 2024 2024-07-15_19-22-55
-  organizationId: blootzz
+  projectName: PSGJ 2024
+  organizationId: ofthe71
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
