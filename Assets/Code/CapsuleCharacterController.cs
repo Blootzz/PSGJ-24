@@ -28,7 +28,7 @@ public class CapsuleCharacterController : MonoBehaviour
     {
         Vector3 forwardVector = Camera.main.transform.forward;
         forwardVector-=forwardVector.y*Vector3.up;
-        rb.velocity = (forwardVector*Input.GetAxis("Vertical") + Camera.main.transform.right*Input.GetAxis("Horizontal"))*Speed;
+        rb.velocity = (forwardVector.normalized*Input.GetAxis("Vertical") + Camera.main.transform.right*Input.GetAxis("Horizontal"))*Speed;
         if(colorWeights.Count == 0)
         {
             capsuleMat.color = baseColor;
