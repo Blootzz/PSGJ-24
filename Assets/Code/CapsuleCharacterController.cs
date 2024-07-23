@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CapsuleCharacterController : MonoBehaviour
 {
-    CharacterController characterController;
+    Rigidbody rb;
     Material capsuleMat;
     Color baseColor;
     List<(Color, float)> colorWeights;
@@ -17,7 +17,7 @@ public class CapsuleCharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody>();
         capsuleMat = GetComponent<MeshRenderer>().material;
         baseColor = capsuleMat.color;
         colorWeights = new List<(Color, float)>();
@@ -26,8 +26,9 @@ public class CapsuleCharacterController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        characterController.Move(move*Speed);
+        Vector3 forwardVector = Camera.main.transform.forward;
+        forwardVector-=forwardVector.y*Vector3.up;
+        rb.velocity = (forwardVector*Input.GetAxis("Vertical") + Camera.main.transform.right*Input.GetAxis("Horizontal"))*Speed;
         if(colorWeights.Count == 0)
         {
             capsuleMat.color = baseColor;
