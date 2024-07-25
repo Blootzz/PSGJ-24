@@ -54,6 +54,7 @@ public class CapsuleCharacterController : MonoBehaviour
         }   
         capsuleMat.color = new Color(r/totalTime, g/totalTime, b/totalTime);
     }
+    /*
     void OnTriggerEnter(Collider collider)
     {
         print(collider.gameObject.name);
@@ -66,5 +67,5 @@ public class CapsuleCharacterController : MonoBehaviour
             }
         }
         colorWeights.Add((collider.GetComponent<Light>().color, affectedTime));
-    }
+    }*/
 }
