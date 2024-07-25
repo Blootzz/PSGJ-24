@@ -20,6 +20,8 @@ public class AbilityControls : MonoBehaviour
     [SerializeField] GameObject selectIndicator; // DO NOT MAKE CHILD OF Panel Scroller. Using childCount to keep track of abilities
     [SerializeField] int selectedIndex;
 
+    bool scrollFrozen = false;
+
     void Start()
     {
         if (panelScroller.transform.childCount > 0)
@@ -35,12 +37,12 @@ public class AbilityControls : MonoBehaviour
     // return after each action to prevent actions on same frame (even though it should be fine)
     void Update()
     {
-        if (Input.GetKeyDown(scrollForwardKey))
+        if (Input.GetKeyDown(scrollForwardKey) && !scrollFrozen)
         {
             ScrollForward();
             return;
         }
-        if (Input.GetKeyDown(scrollBackwardKey))
+        if (Input.GetKeyDown(scrollBackwardKey) && !scrollFrozen)
         {
             ScrollBackward();
             return;
@@ -81,7 +83,7 @@ public class AbilityControls : MonoBehaviour
         if (selectedIndex > panelScroller.transform.childCount - 1)
             selectedIndex = 0;
         if (selectedIndex < 0)
-            selectedIndex = 0;
+            selectedIndex = panelScroller.transform.childCount - 1;
     }
 
     void UpdateSelectIndicator()
@@ -96,6 +98,7 @@ public class AbilityControls : MonoBehaviour
         panelActivate.SetActive(true);
         panelUnequip.SetActive(true);
 
+        scrollFrozen = true;
         SetPlayerTranslation(false);
     }
     void ActivateAbility()
@@ -104,6 +107,7 @@ public class AbilityControls : MonoBehaviour
         panelActivate.SetActive(false);
         panelUnequip.SetActive(false);
 
+        scrollFrozen = false;
         SetPlayerTranslation(true);
 
         // ability will destroy itself if applicable
@@ -122,6 +126,7 @@ public class AbilityControls : MonoBehaviour
         panelActivate.SetActive(false);
         panelUnequip.SetActive(false);
 
+        scrollFrozen = false;
         SetPlayerTranslation(true);
     }
 
