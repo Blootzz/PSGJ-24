@@ -106,10 +106,9 @@ public class AbilityControls : MonoBehaviour
 
         SetPlayerTranslation(true);
 
+        // ability will destroy itself if applicable
         print("Do ability according to icon");
 
-        // remove activated ability
-        Destroy(panelScroller.transform.GetChild(selectedIndex).gameObject);
         // update selection (keep selectedIndex the same)
         CheckIndexOOB();
         if (panelScroller.transform.childCount <= 0)
