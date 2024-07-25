@@ -110,8 +110,9 @@ public class AbilityControls : MonoBehaviour
         scrollFrozen = false;
         SetPlayerTranslation(true);
 
+        // Execute ability
         // ability will destroy itself if applicable
-        print("Do ability according to icon");
+        panelScroller.transform.GetChild(selectedIndex).GetComponent<AbilityIcon>().ExecuteAbility();
 
         // update selection (keep selectedIndex the same)
         CheckIndexOOB();
