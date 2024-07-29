@@ -22,6 +22,16 @@ public class AbilityControls : MonoBehaviour
 
     bool scrollFrozen = false;
 
+    [SerializeField] GameObject testIcon;
+    [InspectorButton(nameof(OnButtonClicked))]
+    public bool AddTest;
+    public void OnButtonClicked()
+    {
+        testIcon.transform.SetParent(panelScroller.transform, false);
+        selectIndicator.SetActive(true); // in case this is the first ability
+        StartCoroutine(nameof(UpdateSelectorNextFrame));
+    }
+
     void Start()
     {
         if (panelScroller.transform.childCount > 0)
@@ -50,7 +60,8 @@ public class AbilityControls : MonoBehaviour
 
         if (Input.GetKeyDown(activateKey) && panelEquip.activeInHierarchy)
         {
-            EquipAbility();
+            if (panelScroller.transform.childCount > 0)
+                EquipAbility();
             return;
         }
         if (Input.GetKeyDown(activateKey) && panelActivate.activeInHierarchy)
@@ -86,8 +97,17 @@ public class AbilityControls : MonoBehaviour
             selectedIndex = panelScroller.transform.childCount - 1;
     }
 
+    /// <summary>
+    /// Not sure why, but when adding new ability, UpdateSelectIndicator doesn't work until next frame
+    /// </summary>
+    IEnumerator UpdateSelectorNextFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        UpdateSelectIndicator();
+    }
     void UpdateSelectIndicator()
     {
+        print("Updating");
         Vector2 targetPos = panelScroller.transform.GetChild(selectedIndex).transform.position;
         selectIndicator.transform.position = targetPos;
     }
@@ -114,13 +134,14 @@ public class AbilityControls : MonoBehaviour
         // ability will destroy itself if applicable
         panelScroller.transform.GetChild(selectedIndex).GetComponent<AbilityIcon>().ExecuteAbility();
 
-        // update selection (keep selectedIndex the same)
-        CheckIndexOOB();
-        if (panelScroller.transform.childCount <= 0)
-            selectIndicator.SetActive(false);
-        else
-            UpdateSelectIndicator();
+        //// update selection (keep selectedIndex the same)
+        //CheckIndexOOB();
+        //if (panelScroller.transform.childCount <= 0)
+        //    selectIndicator.SetActive(false);
+        //else
+        //    UpdateSelectIndicator();
     }
+
     void UnequipAbility()
     {
         panelEquip.SetActive(true);
@@ -133,7 +154,28 @@ public class AbilityControls : MonoBehaviour
 
     void SetPlayerTranslation(bool canMove)
     {
-        print("Set player translation to: "+canMove);
+        print("Set player translation to: " + canMove);
+    }
+
+    public void FinishAbility()
+    {
+        if (panelScroller.transform.childCount == 0)
+        {
+            selectIndicator.SetActive(false);
+            print("Finished last ability");
+        }
+        else
+        {
+            CheckIndexOOB();
+            UpdateSelectIndicator();
+        }
+    }
+
+    public void AddAbility(GameObject newAbility)
+    {
+        newAbility.transform.SetParent(panelScroller.transform, false);
+        selectIndicator.SetActive(true); // in case this is the first ability
+        StartCoroutine(nameof(UpdateSelectorNextFrame));
     }
 
 }

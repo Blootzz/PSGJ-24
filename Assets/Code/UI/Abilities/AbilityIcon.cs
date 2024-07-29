@@ -7,15 +7,27 @@ public class AbilityIcon : MonoBehaviour
 {
     [SerializeField] Sprite baseSprite;
     public GameObject player;
-        
+
+    [InspectorButton(nameof(OnButtonClicked))]
+    public bool killMe;
+    public void OnButtonClicked()
+    {
+        transform.parent.GetComponent<AbilityInator>().DestroyThisIcon(this.gameObject);
+    }
+
     public virtual void Start()
     {
         GetComponent<Image>().sprite = baseSprite;
     }
 
+    public virtual void PrepareAbility()
+    {
+        print("implement preparation visual here");
+    }
+
     public virtual void ExecuteAbility()
     {
         print("Base ability execution");
-        Destroy(this);
-    }
+        transform.parent.GetComponent<AbilityInator>().DestroyThisIcon(this.gameObject);
+     }
 }

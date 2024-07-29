@@ -13,9 +13,9 @@ using System.Reflection;
 /// 
 /// usage:
 /// public class AnyName : Monobehavior{
-///     [InspectorButton(nameof(OnButtonClicked))]
-///     public bool clickMe;
-///     private void OnButtonClicked() { print("clicked!"); }
+//     [InspectorButton(nameof(OnButtonClicked))]
+//     public bool clickMe;
+//     private void OnButtonClicked() { print("clicked!"); }
 /// }
 /// </summary>
 [System.AttributeUsage(System.AttributeTargets.Field)]

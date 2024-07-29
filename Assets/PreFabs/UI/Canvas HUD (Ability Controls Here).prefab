@@ -1675,6 +1675,7 @@ GameObject:
   - component: {fileID: 5474454990979043547}
   - component: {fileID: 9157515303403344807}
   - component: {fileID: 1382812252141432950}
+  - component: {fileID: 5361218540944696011}
   m_Layer: 5
   m_Name: Panel Scroller
   m_TagString: Untagged
@@ -1765,3 +1766,16 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5361218540944696011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9048928486073745268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff29a8bdf14436443af81aff1bd78564, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroySeconds: 0.1
