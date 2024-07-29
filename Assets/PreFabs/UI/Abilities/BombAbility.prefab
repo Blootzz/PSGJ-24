@@ -91,3 +91,5 @@ MonoBehaviour:
   baseSprite: {fileID: 0}
   player: {fileID: 0}
   sprite2: {fileID: 0}
+  bombPrefab: {fileID: 5834450820345052044, guid: f075de60e81be8f4086d2dc6f15be973,
+    type: 3}

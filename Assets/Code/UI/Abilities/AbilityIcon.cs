@@ -8,16 +8,17 @@ public class AbilityIcon : MonoBehaviour
     [SerializeField] Sprite baseSprite;
     public GameObject player;
 
-    [InspectorButton(nameof(OnButtonClicked))]
-    public bool killMe;
-    public void OnButtonClicked()
-    {
-        transform.parent.GetComponent<AbilityInator>().DestroyThisIcon(this.gameObject);
-    }
+    //[InspectorButton(nameof(OnButtonClicked))]
+    //public bool killMe;
+    //public void OnButtonClicked()
+    //{
+    //    transform.parent.GetComponent<AbilityInator>().DestroyThisIcon(this.gameObject);
+    //}
 
     public virtual void Start()
     {
         GetComponent<Image>().sprite = baseSprite;
+        player = FindObjectOfType<CapsuleCharacterController>().gameObject;
     }
 
     public virtual void PrepareAbility()

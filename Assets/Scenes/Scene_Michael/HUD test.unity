@@ -1291,7 +1291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 0}
   player: {fileID: 0}
-  killMe: 0
 --- !u!1 &670300246
 GameObject:
   m_ObjectHideFlags: 0
