@@ -1452,6 +1452,9 @@ MonoBehaviour:
   panelScroller: {fileID: 9048928486073745268}
   selectIndicator: {fileID: 5460804714235271037}
   selectedIndex: 0
+  MAX_ABILITIES: 5
+  testIcon: {fileID: 0}
+  AddTest: 0
 --- !u!1 &6441127704202950511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1779,3 +1782,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroySeconds: 0.1
+  canvasHUD: {fileID: 0}

@@ -19,7 +19,6 @@ public class AbilityInator : MonoBehaviour
     IEnumerator BeginAbilityDestruction()
     {
         yield return new WaitForSeconds(destroySeconds);
-        print("Destroying");
         Destroy(markedForDestruction);
         yield return new WaitForEndOfFrame();
         canvasHUD.FinishAbility();

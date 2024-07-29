@@ -21,16 +21,7 @@ public class AbilityControls : MonoBehaviour
     [SerializeField] int selectedIndex;
 
     bool scrollFrozen = false;
-
-    [SerializeField] GameObject testIcon;
-    [InspectorButton(nameof(OnButtonClicked))]
-    public bool AddTest;
-    public void OnButtonClicked()
-    {
-        testIcon.transform.SetParent(panelScroller.transform, false);
-        selectIndicator.SetActive(true); // in case this is the first ability
-        StartCoroutine(nameof(UpdateSelectorNextFrame));
-    }
+    [SerializeField] int MAX_ABILITIES;
 
     void Start()
     {
@@ -107,7 +98,6 @@ public class AbilityControls : MonoBehaviour
     }
     void UpdateSelectIndicator()
     {
-        print("Updating");
         Vector2 targetPos = panelScroller.transform.GetChild(selectedIndex).transform.position;
         selectIndicator.transform.position = targetPos;
     }
@@ -173,6 +163,11 @@ public class AbilityControls : MonoBehaviour
 
     public void AddAbility(GameObject newAbility)
     {
+        if (panelScroller.transform.childCount >= MAX_ABILITIES)
+        {
+            Destroy(newAbility);
+            return;
+        }
         newAbility.transform.SetParent(panelScroller.transform, false);
         selectIndicator.SetActive(true); // in case this is the first ability
         StartCoroutine(nameof(UpdateSelectorNextFrame));
