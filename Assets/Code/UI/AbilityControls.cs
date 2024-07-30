@@ -110,6 +110,8 @@ public class AbilityControls : MonoBehaviour
 
         scrollFrozen = true;
         SetPlayerTranslation(false);
+
+        panelScroller.transform.GetChild(selectedIndex).GetComponent<AbilityIcon>().PrepareAbility();
     }
     void ActivateAbility()
     {

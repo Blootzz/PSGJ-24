@@ -6,18 +6,27 @@ using UnityEngine.UI;
 public class PortalAbility : AbilityIcon
 {
     [SerializeField] Sprite sprite2;
-    bool mirror1Deployed = false;
+    bool portal1Deployed = false;
+
+    [SerializeField] GameObject portalPrefab;
+    GameObject portal1Reference;
+    GameObject portal2Reference;
 
     public override void ExecuteAbility()
     {
-        if (!mirror1Deployed)
+        if (!portal1Deployed)
         {
-            print("implement deploy mirror 1 here");
-            mirror1Deployed = true;
+            portal1Reference = Instantiate(portalPrefab, player.transform.position, Quaternion.identity);
+            portal1Reference.GetComponent<PortalObject>().isPortal1 = true;
+
+            portal1Deployed = true;
         }
         else
         {
-            print("implement deploy mirror 2 here");
+            portal2Reference = Instantiate(portalPrefab, player.transform.position, Quaternion.identity);
+            portal2Reference.GetComponent<PortalObject>().isPortal1 = false;
+            portal2Reference.GetComponent<PortalObject>().EstablishPortalConnection(portal1Reference, true);
+
             base.ExecuteAbility();
         }
     }

@@ -28,7 +28,6 @@ public class AbilityIcon : MonoBehaviour
 
     public virtual void ExecuteAbility()
     {
-        print("Base ability execution");
         transform.parent.GetComponent<AbilityInator>().DestroyThisIcon(this.gameObject);
-     }
+    }
 }

@@ -15,7 +15,6 @@ public class BombAbility : AbilityIcon
     {
         if (!bombDeployed)
         {
-            print("implemet deploy bomb here");
             bombReference = Instantiate(bombPrefab, player.transform.position, Quaternion.identity);
             bombDeployed = true;
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7962207067626357088}
   - component: {fileID: 4626202026314295351}
   m_Layer: 5
-  m_Name: MirrorAbility
+  m_Name: PortalAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -91,3 +91,5 @@ MonoBehaviour:
   baseSprite: {fileID: 0}
   player: {fileID: 0}
   sprite2: {fileID: 0}
+  portalPrefab: {fileID: 5834450820345052044, guid: 23593ebbbec3d9346a57cb97951ad46f,
+    type: 3}
