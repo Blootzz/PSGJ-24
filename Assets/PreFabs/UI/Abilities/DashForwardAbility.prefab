@@ -90,3 +90,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseSprite: {fileID: 0}
   player: {fileID: 0}
+  forceMagnitude: 10
+  heightY: 2

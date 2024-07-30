@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8959369652381035352}
   - component: {fileID: 7962207067626357088}
   - component: {fileID: -5172384507768409508}
+  - component: {fileID: 8577097607654910388}
   m_Layer: 5
   m_Name: DiagonalAbility
   m_TagString: Untagged
@@ -88,5 +89,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2130777b1334474ebc65ca0590563a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseImage: {fileID: 0}
+  baseSprite: {fileID: 0}
   player: {fileID: 0}
+  forceMagnitude: 10
+  heightY: 0
+--- !u!114 &8577097607654910388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4300033301427021253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2130777b1334474ebc65ca0590563a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseSprite: {fileID: 0}
+  player: {fileID: 0}
+  forceMagnitude: 0
+  heightY: 0

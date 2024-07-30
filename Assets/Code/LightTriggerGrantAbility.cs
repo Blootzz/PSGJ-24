@@ -29,8 +29,8 @@ public class LightTriggerGrantAbility : MonoBehaviour
                 other.gameObject.AddComponent<BombAbility>();
                 selectedPrefab = Instantiate(BombPrefab);
                 break;
-            case AbilityType.Mirror:
-                other.gameObject.AddComponent<MirrorAbility>();
+            case AbilityType.Portal:
+                other.gameObject.AddComponent<PortalAbility>();
                 selectedPrefab = Instantiate(MirrorPrefab);
                 break;
             case AbilityType.Vault:
@@ -55,7 +55,7 @@ public enum AbilityType
 {
     DiagonalBoost,
     Bomb,
-    Mirror,
+    Portal,
     Vault,
     DashForward
 }

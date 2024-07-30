@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MirrorAbility : AbilityIcon
+public class PortalAbility : AbilityIcon
 {
     [SerializeField] Sprite sprite2;
     bool mirror1Deployed = false;
