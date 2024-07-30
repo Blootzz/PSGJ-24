@@ -39,6 +39,8 @@ public class LightProjection : MonoBehaviour
         if (Physics.Raycast(transform.parent.position, transform.parent.forward, out hit, maxDistance, layerMask))
         {
             UpdateMirror(hit.collider);
+            UpdateTrigger(hit.collider);
+
             scaleDist = hit.distance/2;
             Debug.DrawLine(transform.parent.position, transform.parent.position + transform.parent.forward * hit.distance, Color.yellow, 10);
         }
@@ -55,6 +57,7 @@ public class LightProjection : MonoBehaviour
         if(collider.tag == "LightProjection")
             return;
         UpdateMirror(collider); 
+        UpdateTrigger(collider);
         float scaleDist = Vector3.Distance(transform.parent.position, collider.gameObject.transform.position)/2;
         ExtendObject(scaleDist);
     }
@@ -63,6 +66,7 @@ public class LightProjection : MonoBehaviour
         if(collider.tag == "LightProjection")
             return;
         UpdateMirror(collider);
+        UpdateTrigger(collider);
         float scaleDist = Vector3.Distance(transform.parent.position, collider.gameObject.transform.position)/2;
         ExtendObject(scaleDist);
     }
@@ -91,6 +95,11 @@ public class LightProjection : MonoBehaviour
             collider.transform.GetChild(0).gameObject.GetComponent<LightProjection>().ability = this.ability;
             collider.transform.GetChild(0).gameObject.GetComponent<LightProjection>().onSetActive();
         }
+    }
+    void UpdateTrigger(Collider collider)
+    {
+        if(collider.tag == "LightTrigger")
+            collider.GetComponent<LightTrigger>().DoEvent(color);
     }
     
 }
